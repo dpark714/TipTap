@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    Left    -->
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
+        android:src="@drawable/tip"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvBaseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="130dp"
+        android:text="Base"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/tvTipPercentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvBaseLabel"
+        tools:ignore="MissingConstraints"
+        tools:text="20%" />
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Tip"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tvTipPercentLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTipPercentLabel"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Total"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tvTipLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTipLabel"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvTotalLabel"
+        app:layout_constraintStart_toStartOf="@id/spinner"
+        app:layout_constraintTop_toTopOf="@id/tvTotalLabel"
+        tools:text="40" />
+
+    <TextView
+        android:id="@+id/partyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Party"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tvTotalLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalLabel" />
+
+    <!--    Right   -->
+
+    <EditText
+        android:id="@+id/etBaseAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:ems="8"
+        android:hint="Bill amount"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvBaseLabel"
+        app:layout_constraintStart_toEndOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toTopOf="@id/tvBaseLabel"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@id/tvTipPercentLabel"
+        app:layout_constraintStart_toEndOf="@id/tvTipPercentLabel"
+        app:layout_constraintTop_toTopOf="@id/tvTipPercentLabel" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvTipLabel"
+        app:layout_constraintStart_toEndOf="@id/tvTipLabel"
+        app:layout_constraintTop_toTopOf="@id/tvTipLabel"
+        tools:ignore="MissingConstraints"
+        tools:text="20" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/partyText"
+        app:layout_constraintStart_toEndOf="@id/partyText"
+        app:layout_constraintTop_toTopOf="@id/partyText"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
